@@ -7,12 +7,12 @@ on:
 jobs:
   security_test:
     runs-on: ubuntu-latest
-  needs: [deploy]
-  steps:
-    - name: ZAP Baseline Scan
-      uses: zaproxy/action-baseline@v0.15.0
-      with:
-        target: "https://hangryhippo.quantic.host"
+    needs: [deploy]
+    steps:
+      - name: ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.15.0
+        with:
+          target: "https://hangryhippo.quantic.host"
   #  function_test: (commented out to save learner time)
   #    runs-on: ubuntu-latest
   #    defaults:
